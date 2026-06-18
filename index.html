@@ -66,9 +66,9 @@
   /* VIGNETTE */
   .vignette{border-left:4px solid var(--orange); background:#fdf6f3}
   .vignette-id{font-size:11px; font-weight:800; color:var(--orange); text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px}
-  .vignette-title{font-size:16px; font-weight:800; color:#712B13; margin-bottom:8px}
+  .vignette-title{font-size:18px; font-weight:800; color:#712B13; margin-bottom:8px}
   .vignette-text{font-size:14px; color:var(--ink); margin-bottom:12px}
-  .vignette-q{font-size:13px; font-style:italic; color:#854f0b; margin-bottom:12px}
+  .vignette-q{font-size:15px; font-style:italic; color:#854f0b; margin-bottom:12px}
 
   /* SLIDER CARD */
   .slider-top{display:flex; align-items:flex-start; gap:10px; margin-bottom:8px}
@@ -81,8 +81,8 @@
   .slider-row{display:flex; align-items:center; gap:12px; margin-bottom:6px}
   .slider-col{flex:1}
   input[type=range]{-webkit-appearance:none; appearance:none; width:100%; height:6px; border-radius:4px; background:var(--a1); outline:none; cursor:pointer}
-  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none; width:20px; height:20px; border-radius:50%; background:var(--navy); border:3px solid #fff; box-shadow:0 1px 4px rgba(0,0,0,.25); cursor:pointer}
-  input[type=range]::-moz-range-thumb{width:20px; height:20px; border-radius:50%; background:var(--navy); border:3px solid #fff; box-shadow:0 1px 4px rgba(0,0,0,.25); cursor:pointer}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none; width:22px; height:22px; border-radius:50%; background:var(--orange); border:3px solid #fff; box-shadow:0 1px 4px rgba(0,0,0,.25); cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:22px; height:22px; border-radius:50%; background:var(--orange); border:3px solid #fff; box-shadow:0 1px 4px rgba(0,0,0,.25); cursor:pointer}
   .value-bar{height:8px; border-radius:4px; background:var(--a1); margin-top:6px; overflow:hidden}
   .value-fill{height:100%; width:0%; background:var(--a1); transition:width .15s, background .15s}
   .level-tag{flex-shrink:0; width:130px; text-align:right; font-size:12.5px; font-weight:700; color:var(--grey)}
@@ -262,8 +262,8 @@
       <label class="q-label" data-i18n="d1_label">País en el que trabajas actualmente</label>
       <select id="d1">
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
-        <option>España</option><option>Francia</option><option>Alemania</option><option>Italia</option>
-        <option>Portugal</option><option>Polonia</option><option>Países Bajos</option><option>Bélgica</option>
+        <option value="Spain">España</option><option value="France">Francia</option><option value="Germany">Alemania</option><option value="Italy">Italia</option>
+        <option value="Portugal">Portugal</option><option value="Poland">Polonia</option><option value="Netherlands">Países Bajos</option><option value="Belgium">Bélgica</option>
         <option data-i18n="other_country">Otro país de la UE</option>
       </select>
     </div>
@@ -272,12 +272,12 @@
       <label class="q-label" data-i18n="d_age_label">Tu rango de edad</label>
       <select id="dAge">
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
-        <option data-i18n="d_age_1">Menos de 25</option>
-        <option data-i18n="d_age_2">25-34</option>
-        <option data-i18n="d_age_3">35-44</option>
-        <option data-i18n="d_age_4">45-54</option>
-        <option data-i18n="d_age_5">55-64</option>
-        <option data-i18n="d_age_6">65 o más</option>
+        <option data-i18n="d_age_1" value="Under 25">Menos de 25</option>
+        <option data-i18n="d_age_2" value="25-34">25-34</option>
+        <option data-i18n="d_age_3" value="35-44">35-44</option>
+        <option data-i18n="d_age_4" value="45-54">45-54</option>
+        <option data-i18n="d_age_5" value="55-64">55-64</option>
+        <option data-i18n="d_age_6" value="65+">65 o más</option>
       </select>
     </div>
 
@@ -285,10 +285,10 @@
       <label class="q-label" data-i18n="d_gender_label">Género</label>
       <select id="dGender">
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
-        <option data-i18n="d_gender_1">Mujer</option>
-        <option data-i18n="d_gender_2">Hombre</option>
-        <option data-i18n="d_gender_3">No binario</option>
-        <option data-i18n="d_gender_4">Prefiero no decirlo</option>
+        <option data-i18n="d_gender_1" value="Woman">Mujer</option>
+        <option data-i18n="d_gender_2" value="Man">Hombre</option>
+        <option data-i18n="d_gender_3" value="Non-binary">No binario</option>
+        <option data-i18n="d_gender_4" value="Prefer not to say">Prefiero no decirlo</option>
       </select>
     </div>
 
@@ -296,9 +296,9 @@
       <label class="q-label" data-i18n="d_contract_label">Tipo de contrato laboral</label>
       <select id="dContract">
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
-        <option data-i18n="d_contract_1">Permanente / funcionario</option>
-        <option data-i18n="d_contract_2">Temporal / interino</option>
-        <option data-i18n="d_contract_3">Otro</option>
+        <option data-i18n="d_contract_1" value="Permanent">Permanente / funcionario</option>
+        <option data-i18n="d_contract_2" value="Temporary">Temporal / interino</option>
+        <option data-i18n="d_contract_3" value="Other">Otro</option>
       </select>
     </div>
 
@@ -306,10 +306,10 @@
       <label class="q-label" data-i18n="d_edu_label">Nivel educativo máximo alcanzado</label>
       <select id="dEdu">
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
-        <option data-i18n="d_edu_1">Diplomatura / Grado</option>
-        <option data-i18n="d_edu_2">Máster</option>
-        <option data-i18n="d_edu_3">Doctorado</option>
-        <option data-i18n="d_edu_4">Otro</option>
+        <option data-i18n="d_edu_1" value="Bachelor">Diplomatura / Grado</option>
+        <option data-i18n="d_edu_2" value="Master">Máster</option>
+        <option data-i18n="d_edu_3" value="Doctorate">Doctorado</option>
+        <option data-i18n="d_edu_4" value="Other">Otro</option>
       </select>
     </div>
 
@@ -317,13 +317,13 @@
       <label class="q-label" data-i18n="d2_label">Etapa educativa en la que trabajas</label>
       <select id="d2">
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
-        <option data-i18n="d2_infantil">Infantil</option>
-        <option data-i18n="d2_primaria">Primaria</option>
-        <option data-i18n="d2_secundaria">Secundaria</option>
-        <option data-i18n="d2_bachillerato">Bachillerato</option>
-        <option data-i18n="d2_fp">Formación Profesional</option>
-        <option data-i18n="d2_superior">Educación Superior</option>
-        <option data-i18n="d2_otra">Otra</option>
+        <option data-i18n="d2_infantil" value="Early childhood">Infantil</option>
+        <option data-i18n="d2_primaria" value="Primary">Primaria</option>
+        <option data-i18n="d2_secundaria" value="Secondary">Secundaria</option>
+        <option data-i18n="d2_bachillerato" value="Upper secondary">Bachillerato</option>
+        <option data-i18n="d2_fp" value="VET">Formación Profesional</option>
+        <option data-i18n="d2_superior" value="Higher education">Educación Superior</option>
+        <option data-i18n="d2_otra" value="Other">Otra</option>
       </select>
     </div>
 
@@ -331,8 +331,8 @@
       <label class="q-label" data-i18n="d3_label">Años de experiencia docente</label>
       <select id="d3">
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
-        <option>0–5</option><option>6–10</option><option>11–20</option>
-        <option data-i18n="d3_more">Más de 20</option>
+        <option value="0-5">0–5</option><option value="6-10">6–10</option><option value="11-20">11–20</option>
+        <option data-i18n="d3_more" value="20+">Más de 20</option>
       </select>
     </div>
 
@@ -340,11 +340,11 @@
       <label class="q-label" data-i18n="d5_label">¿Con qué frecuencia usas herramientas de IA en tu docencia?</label>
       <select id="d5">
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
-        <option data-i18n="d5_never">Nunca</option>
-        <option data-i18n="d5_occ">Ocasionalmente</option>
-        <option data-i18n="d5_monthly">Mensualmente</option>
-        <option data-i18n="d5_weekly">Semanalmente</option>
-        <option data-i18n="d5_daily">A diario</option>
+        <option data-i18n="d5_never" value="Never">Nunca</option>
+        <option data-i18n="d5_occ" value="Occasionally">Ocasionalmente</option>
+        <option data-i18n="d5_monthly" value="Monthly">Mensualmente</option>
+        <option data-i18n="d5_weekly" value="Weekly">Semanalmente</option>
+        <option data-i18n="d5_daily" value="Daily">A diario</option>
       </select>
     </div>
 
@@ -352,9 +352,9 @@
       <label class="q-label" data-i18n="d6_label">Tipo de centro donde trabajas</label>
       <select id="d6">
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
-        <option data-i18n="d6_urban">Urbano</option>
-        <option data-i18n="d6_suburban">Semiurbano</option>
-        <option data-i18n="d6_rural">Rural</option>
+        <option data-i18n="d6_urban" value="Urban">Urbano</option>
+        <option data-i18n="d6_suburban" value="Suburban">Semiurbano</option>
+        <option data-i18n="d6_rural" value="Rural">Rural</option>
       </select>
     </div>
 
