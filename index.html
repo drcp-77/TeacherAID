@@ -88,6 +88,16 @@
   .level-tag{flex-shrink:0; width:130px; text-align:right; font-size:12.5px; font-weight:700; color:var(--grey)}
 
   .nsab-row{display:flex; align-items:center; gap:6px; margin-top:10px; font-size:12.5px; color:var(--grey-light)}
+  .slider-instruction{font-size:12px; color:var(--orange); font-weight:600; margin-bottom:8px}
+  .card.answered .slider-instruction{display:none}
+  .confirm-row{margin-top:8px}
+  .confirm-btn{background:#fff; border:1px solid var(--orange); color:var(--orange); font-size:12.5px; font-weight:700; padding:6px 14px; border-radius:999px; cursor:pointer}
+  .confirm-btn:hover{background:#fdf6f3}
+  .card.answered .confirm-row{display:none}
+  .card.item-warning{border:2px solid var(--orange); animation:pulse-warn .4s ease}
+  @keyframes pulse-warn{0%{box-shadow:0 0 0 0 rgba(216,90,48,.4)} 100%{box-shadow:0 0 0 6px rgba(216,90,48,0)}}
+  .step-warning{display:none; background:#FAEEDA; border:1px solid #f0d4a8; border-radius:10px; padding:10px 14px; font-size:13px; color:#854f0b; margin-top:14px; text-align:center}
+  .step-warning.show{display:block}
   .nsab-row input{margin:0; accent-color:var(--orange)}
   .nsab-row label{cursor:pointer}
   .card.disabled-by-nsab .slider-row, .card.disabled-by-nsab .value-bar{opacity:.35; pointer-events:none}
@@ -358,6 +368,7 @@
       </select>
     </div>
 
+    <div class="step-warning" data-i18n="validation_warning">Responde este ítem o selecciona &quot;No sabría responder&quot;.</div>
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-primary" data-next data-i18n="continue">Continuar →</button>
@@ -385,6 +396,7 @@
 
     <div id="vignettesContainer"></div>
 
+    <div class="step-warning" data-i18n="validation_warning">Responde este ítem o selecciona &quot;No sabría responder&quot;.</div>
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-primary" data-next data-i18n="continue">Continuar →</button>
@@ -419,6 +431,7 @@
 
     <div id="slidersContainer2"></div>
 
+    <div class="step-warning" data-i18n="validation_warning">Responde este ítem o selecciona &quot;No sabría responder&quot;.</div>
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-primary" data-next data-i18n="continue">Continuar →</button>
@@ -458,6 +471,7 @@
 
     <div id="slidersContainer3"></div>
 
+    <div class="step-warning" data-i18n="validation_warning">Responde este ítem o selecciona &quot;No sabría responder&quot;.</div>
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-primary" data-next data-i18n="continue" id="finishBlock1Btn">Continuar →</button>
@@ -475,6 +489,7 @@
       </div>
     </div>
 
+    <div class="step-warning" data-i18n="validation_warning">Responde este ítem o selecciona &quot;No sabría responder&quot;.</div>
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-ghost" id="submitBlock1Btn" data-i18n="submit_now">Enviar y finalizar →</button>
@@ -508,6 +523,7 @@
 
     <div id="slidersC2a"></div>
 
+    <div class="step-warning" data-i18n="validation_warning">Responde este ítem o selecciona &quot;No sabría responder&quot;.</div>
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-primary" data-next data-i18n="continue">Continuar →</button>
@@ -532,6 +548,7 @@
 
     <div id="vignettesC2"></div>
 
+    <div class="step-warning" data-i18n="validation_warning">Responde este ítem o selecciona &quot;No sabría responder&quot;.</div>
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-primary" data-next data-i18n="continue">Continuar →</button>
@@ -556,6 +573,7 @@
 
     <div id="slidersC2b"></div>
 
+    <div class="step-warning" data-i18n="validation_warning">Responde este ítem o selecciona &quot;No sabría responder&quot;.</div>
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-primary" data-next data-i18n="continue">Continuar →</button>
@@ -578,6 +596,7 @@
       </div>
     </div>
 
+    <div class="step-warning" data-i18n="validation_warning">Responde este ítem o selecciona &quot;No sabría responder&quot;.</div>
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-primary" id="inv1NextBtn" data-i18n="continue">Continuar →</button>
@@ -605,6 +624,7 @@
 
     <div id="concernsContainer"></div>
 
+    <div class="step-warning" data-i18n="validation_warning">Responde este ítem o selecciona &quot;No sabría responder&quot;.</div>
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-primary" data-next data-i18n="continue">Continuar →</button>
@@ -629,6 +649,7 @@
 
     <div id="slidersC3b"></div>
 
+    <div class="step-warning" data-i18n="validation_warning">Responde este ítem o selecciona &quot;No sabría responder&quot;.</div>
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-primary" id="submitFinalBtn" data-i18n="submit_now">Enviar y finalizar →</button>
@@ -1889,6 +1910,10 @@ const I18N = {
     tr1_label:"¿Qué tipos de formación en IA has recibido? (varias opciones)",
     tr2_label:"Horas aproximadas de formación en los últimos 2 años", tr2_none:"Ninguna", tr2_more:"Más de 30",
     nsab:"No sabría responder a esto",
+    slider_instruction:"Mueve el deslizador o pulsa \"Confirmar\" para registrar tu respuesta.",
+    unanswered_tag:"Sin responder",
+    confirm_value:"Confirmar {v}",
+    validation_warning:"Responde este ítem o selecciona \"No sabría responder\".",
     sort_hint:"En móvil: toca una tarjeta y luego toca la zona donde quieras colocarla.",
     howto_title:"Cómo responder",
     howto_slider:"Deslizadores: arrastra el círculo, o tócalo y usa las flechas del teclado en ordenador.",
@@ -1969,6 +1994,10 @@ const I18N = {
     tr1_label:"What types of AI training have you received? (select all that apply)",
     tr2_label:"Approximate hours of training in the last 2 years", tr2_none:"None", tr2_more:"More than 30",
     nsab:"I would not know how to answer this",
+    slider_instruction:"Move the slider or press \"Confirm\" to record your answer.",
+    unanswered_tag:"Unanswered",
+    confirm_value:"Confirm {v}",
+    validation_warning:"Please answer this item or select \"I would not know how to answer this\".",
     sort_hint:"On mobile: tap a card, then tap the zone where you want to place it.",
     howto_title:"How to answer",
     howto_slider:"Sliders: drag the circle, or tap it and use the keyboard arrows on a computer.",
@@ -2049,6 +2078,10 @@ const I18N = {
     tr1_label:"Quels types de formation en IA avez-vous reçus ? (plusieurs réponses possibles)",
     tr2_label:"Heures approximatives de formation au cours des 2 dernières années", tr2_none:"Aucune", tr2_more:"Plus de 30",
     nsab:"Je ne saurais pas répondre à cela",
+    slider_instruction:"Déplacez le curseur ou appuyez sur \"Confirmer\" pour enregistrer votre réponse.",
+    unanswered_tag:"Sans réponse",
+    confirm_value:"Confirmer {v}",
+    validation_warning:"Veuillez répondre à cet item ou sélectionner \"Je ne saurais pas répondre\".",
     sort_hint:"Sur mobile : touchez une carte, puis touchez la zone où la placer.",
     howto_title:"Comment répondre",
     howto_slider:"Curseurs : faites glisser le cercle, ou touchez-le et utilisez les flèches du clavier sur ordinateur.",
@@ -2129,6 +2162,10 @@ const I18N = {
     tr1_label:"Welche Arten von KI-Schulungen haben Sie erhalten? (Mehrfachauswahl möglich)",
     tr2_label:"Ungefähre Schulungsstunden in den letzten 2 Jahren", tr2_none:"Keine", tr2_more:"Mehr als 30",
     nsab:"Ich wüsste nicht, wie ich das beantworten soll",
+    slider_instruction:"Bewegen Sie den Regler oder drücken Sie \"Bestätigen\", um Ihre Antwort zu speichern.",
+    unanswered_tag:"Unbeantwortet",
+    confirm_value:"Bestätigen {v}",
+    validation_warning:"Bitte beantworten Sie dieses Item oder wählen Sie \"Ich wüsste nicht, wie ich das beantworten soll\".",
     sort_hint:"Auf dem Handy: Karte antippen, dann die gewünschte Zone antippen.",
     howto_title:"Wie Sie antworten",
     howto_slider:"Schieberegler: Ziehen Sie den Kreis, oder tippen Sie ihn an und nutzen Sie am Computer die Pfeiltasten.",
@@ -2209,6 +2246,10 @@ const I18N = {
     tr1_label:"Che tipo di formazione sull'IA hai ricevuto? (selezione multipla)",
     tr2_label:"Ore approssimative di formazione negli ultimi 2 anni", tr2_none:"Nessuna", tr2_more:"Più di 30",
     nsab:"Non saprei come rispondere",
+    slider_instruction:"Sposta il cursore o premi \"Conferma\" per registrare la tua risposta.",
+    unanswered_tag:"Senza risposta",
+    confirm_value:"Conferma {v}",
+    validation_warning:"Rispondi a questo item oppure seleziona \"Non saprei rispondere\".",
     sort_hint:"Su dispositivo mobile: tocca una carta, poi tocca la zona in cui posizionarla.",
     howto_title:"Come rispondere",
     howto_slider:"Cursori: trascina il cerchio, oppure toccalo e usa le freccette della tastiera sul computer.",
@@ -2289,6 +2330,10 @@ const I18N = {
     tr1_label:"Que tipos de formação em IA recebeu? (pode selecionar várias)",
     tr2_label:"Horas aproximadas de formação nos últimos 2 anos", tr2_none:"Nenhuma", tr2_more:"Mais de 30",
     nsab:"Não saberia responder a isto",
+    slider_instruction:"Mova o controlo deslizante ou prima \"Confirmar\" para registar a sua resposta.",
+    unanswered_tag:"Sem resposta",
+    confirm_value:"Confirmar {v}",
+    validation_warning:"Responda a este item ou selecione \"Não saberia responder\".",
     sort_hint:"No telemóvel: toque num cartão e depois toque na zona onde o quer colocar.",
     howto_title:"Como responder",
     howto_slider:"Cursores: arraste o círculo, ou toque nele e use as setas do teclado no computador.",
@@ -2369,6 +2414,10 @@ const I18N = {
     tr1_label:"Jakie rodzaje szkoleń z AI otrzymałeś/aś? (można wybrać kilka)",
     tr2_label:"Przybliżona liczba godzin szkolenia w ostatnich 2 latach", tr2_none:"Brak", tr2_more:"Więcej niż 30",
     nsab:"Nie wiedziałbym/abym jak na to odpowiedzieć",
+    slider_instruction:"Przesuń suwak lub naciśnij \"Potwierdź\", aby zarejestrować odpowiedź.",
+    unanswered_tag:"Brak odpowiedzi",
+    confirm_value:"Potwierdź {v}",
+    validation_warning:"Odpowiedz na to pytanie lub wybierz \"Nie wiedziałbym/abym jak odpowiedzieć\".",
     sort_hint:"Na telefonie: dotknij karty, a potem dotknij strefy, w której chcesz ją umieścić.",
     howto_title:"Jak odpowiadać",
     howto_slider:"Przesuwniki: przeciągnij kółko lub dotknij go i użyj strzałek klawiatury na komputerze.",
@@ -2449,6 +2498,10 @@ const I18N = {
     tr1_label:"Welke soorten AI-training heeft u ontvangen? (meerdere antwoorden mogelijk)",
     tr2_label:"Geschatte uren training in de afgelopen 2 jaar", tr2_none:"Geen", tr2_more:"Meer dan 30",
     nsab:"Ik zou dit niet kunnen beantwoorden",
+    slider_instruction:"Verplaats de schuifregelaar of druk op \"Bevestigen\" om uw antwoord te registreren.",
+    unanswered_tag:"Onbeantwoord",
+    confirm_value:"Bevestigen {v}",
+    validation_warning:"Beantwoord dit item of selecteer \"Ik zou dit niet kunnen beantwoorden\".",
     sort_hint:"Op mobiel: tik op een kaart en tik daarna op de zone waar u die wilt plaatsen.",
     howto_title:"Hoe te antwoorden",
     howto_slider:"Schuifregelaars: sleep de cirkel, of tik erop en gebruik op de computer de pijltjestoetsen.",
@@ -2553,6 +2606,7 @@ function buildSliderCard(item, anchors, idPrefix, compact){
   const card = document.createElement('div');
   if(!compact) card.className = 'card';
   card.dataset.itemId = item.id;
+  card.dataset.required = '1';
 
   if(item.text){
     const top = document.createElement('div');
@@ -2582,12 +2636,17 @@ function buildSliderCard(item, anchors, idPrefix, compact){
     card.appendChild(def);
   }
 
+  const instr = document.createElement('div');
+  instr.className = 'slider-instruction';
+  instr.textContent = T('slider_instruction');
+  card.appendChild(instr);
+
   const row = document.createElement('div');
   row.className = 'slider-row';
   const col = document.createElement('div');
   col.className = 'slider-col';
   const slider = document.createElement('input');
-  slider.type = 'range'; slider.min=0; slider.max=100; slider.value=50;
+  slider.type = 'range'; slider.min=0; slider.max=100; slider.value=50; slider.step=1;
   slider.setAttribute('aria-label', item.text);
   const bar = document.createElement('div');
   bar.className = 'value-bar';
@@ -2600,18 +2659,54 @@ function buildSliderCard(item, anchors, idPrefix, compact){
   row.appendChild(col); row.appendChild(tag);
   card.appendChild(row);
 
-  function update(){
+  const confirmRow = document.createElement('div');
+  confirmRow.className = 'confirm-row';
+  const confirmBtn = document.createElement('button');
+  confirmBtn.type = 'button';
+  confirmBtn.className = 'confirm-btn';
+  confirmRow.appendChild(confirmBtn);
+  card.appendChild(confirmRow);
+
+  // Initialize state: untouched until interaction or confirmation
+  responses[item.id] = { value: null, touched: false, nsab: false };
+
+  function renderUnanswered(){
     const v = parseInt(slider.value);
+    fill.style.width = v+'%';
+    fill.style.background = '#e5e7eb';
+    tag.textContent = T('unanswered_tag');
+    tag.style.color = '#9ca3af';
+    confirmBtn.textContent = T('confirm_value').replace('{v}', v);
+    card.classList.remove('answered');
+    card.classList.remove('item-warning');
+  }
+
+  function renderAnswered(v){
     const lvl = getLevel(v);
     fill.style.width = v+'%';
     fill.style.background = ANCHOR_COLORS[lvl];
-    tag.textContent = anchors[lvl];
+    tag.textContent = anchors[lvl] + ' (' + v + ')';
     tag.style.color = lvl>=2 ? ANCHOR_COLORS[lvl] : '#6b7280';
-    responses[item.id] = responses[item.id] || {};
-    responses[item.id].value = v;
+    card.classList.add('answered');
+    card.classList.remove('item-warning');
   }
-  slider.oninput = update;
-  update();
+
+  function commitValue(v){
+    responses[item.id].value = v;
+    responses[item.id].touched = true;
+    responses[item.id].nsab = false;
+    renderAnswered(v);
+    updateNavButtonState();
+  }
+
+  slider.addEventListener('input', () => {
+    commitValue(parseInt(slider.value));
+  });
+  confirmBtn.addEventListener('click', () => {
+    commitValue(parseInt(slider.value));
+  });
+
+  renderUnanswered();
 
   // NSAB checkbox
   const nsabRow = document.createElement('div');
@@ -2624,14 +2719,23 @@ function buildSliderCard(item, anchors, idPrefix, compact){
   nsabLabel.textContent = T('nsab');
   nsabInput.onchange = () => {
     card.classList.toggle('disabled-by-nsab', nsabInput.checked);
-    responses[item.id] = responses[item.id] || {};
     responses[item.id].nsab = nsabInput.checked;
+    if(nsabInput.checked){
+      card.classList.add('answered');
+      card.classList.remove('item-warning');
+    } else if(!responses[item.id].touched){
+      card.classList.remove('answered');
+      renderUnanswered();
+    }
+    updateNavButtonState();
   };
   nsabRow.appendChild(nsabInput); nsabRow.appendChild(nsabLabel);
   card.appendChild(nsabRow);
 
   return card;
 }
+
+
 
 function buildVignetteCard(v, lang){
   const card = document.createElement('div');
@@ -2830,6 +2934,7 @@ function buildC2VignetteCard(v, lang){
       btn.classList.add('selected');
       responses[v.id+'_FILTER'] = {value:o.key};
       conditional.classList.toggle('show', o.key==='si');
+      updateNavButtonState();
     };
     ynRow.appendChild(btn);
   });
@@ -2890,6 +2995,7 @@ function buildConcernCard(t, lang){
       btn.classList.add('selected');
       responses[t.id+'_FILTER'] = {value:key};
       conditional.classList.toggle('show', key==='yes');
+      updateNavButtonState();
     };
     ynRow.appendChild(btn);
   });
@@ -3027,9 +3133,52 @@ function updateProgress(){
   }
 }
 
+/* ============================================================
+   STEP VALIDATION — ensure all visible required sliders are
+   answered (touched/confirmed or nsab) before allowing advance
+   ============================================================ */
+function getUnansweredCardsInStep(step){
+  const block = document.querySelector(`.block[data-step="${step}"]`);
+  if(!block) return [];
+  const cards = Array.from(block.querySelectorAll('.card[data-required="1"]'));
+  return cards.filter(card => {
+    const id = card.dataset.itemId;
+    const r = responses[id];
+    if(!r) return false;
+    // Skip items hidden inside a collapsed .conditional section
+    const hiddenParent = card.closest('.conditional:not(.show)');
+    if(hiddenParent) return false;
+    return !r.touched && !r.nsab;
+  });
+}
+
+function validateCurrentStep(){
+  const unanswered = getUnansweredCardsInStep(currentStep);
+  const warningEl = document.querySelector(`.block[data-step="${currentStep}"] .step-warning`);
+  if(unanswered.length === 0){
+    if(warningEl) warningEl.classList.remove('show');
+    return true;
+  }
+  unanswered.forEach(c => c.classList.add('item-warning'));
+  if(warningEl) warningEl.classList.add('show');
+  unanswered[0].scrollIntoView({behavior:'smooth', block:'center'});
+  return false;
+}
+
+function updateNavButtonState(){
+  const block = document.querySelector(`.block[data-step="${currentStep}"].active`);
+  if(!block) return;
+  const unanswered = getUnansweredCardsInStep(currentStep);
+  const nextBtns = block.querySelectorAll('[data-next], #submitFinalBtn, #submitBlock1Btn, #finishBlock1Btn');
+  nextBtns.forEach(btn => {
+    btn.disabled = unanswered.length > 0;
+  });
+}
+
 function showStep(step){
   document.querySelectorAll('.block').forEach(b => b.classList.remove('active'));
   const block = document.querySelector(`.block[data-step="${step}"]`);
+
   block.classList.add('active');
   currentStep = step;
   updateProgress();
@@ -3079,6 +3228,7 @@ function showStep(step){
   }
 
   window.scrollTo({top:0, behavior:'smooth'});
+  updateNavButtonState();
 }
 
 /* ============================================================
@@ -3215,6 +3365,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
     currentLang = btn.dataset.lang;
     applyTranslations();
     renderAll();
+    updateNavButtonState();
   });
 });
 
@@ -3230,6 +3381,7 @@ document.getElementById('startBtn').addEventListener('click', () => {
 
 document.querySelectorAll('[data-next]').forEach(btn => {
   btn.addEventListener('click', () => {
+    if(!validateCurrentStep()) return;
     // Generic "next" goes currentStep+1, except steps with custom buttons handled separately
     if(currentStep < totalSteps) showStep(currentStep+1);
   });
@@ -3251,12 +3403,14 @@ document.getElementById('inv1No').addEventListener('click', () => {
 });
 
 document.getElementById('submitBlock1Btn').addEventListener('click', () => {
+  if(!validateCurrentStep()) return;
   submitResponses();
   renderProfile();
   showStep(12);
 });
 
 document.getElementById('inv1NextBtn').addEventListener('click', () => {
+  if(!validateCurrentStep()) return;
   if(responses['INV1'] && responses['INV1'].value === 'no'){
     submitResponses();
     renderProfile();
@@ -3268,6 +3422,7 @@ document.getElementById('inv1NextBtn').addEventListener('click', () => {
 
 // Step 11 (final submit)
 document.getElementById('submitFinalBtn').addEventListener('click', () => {
+  if(!validateCurrentStep()) return;
   submitResponses();
   renderProfile();
   showStep(12);
@@ -3276,6 +3431,7 @@ document.getElementById('submitFinalBtn').addEventListener('click', () => {
 // init
 applyTranslations();
 renderAll();
+updateNavButtonState();
 
 // Welcome page main audio: title + subtitle + both paragraphs
 document.getElementById('welcomePageSpeakBtn').addEventListener('click', () => {
