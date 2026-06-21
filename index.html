@@ -97,6 +97,7 @@
   .card.item-warning{border:2px solid var(--orange); animation:pulse-warn .4s ease}
   @keyframes pulse-warn{0%{box-shadow:0 0 0 0 rgba(216,90,48,.4)} 100%{box-shadow:0 0 0 6px rgba(216,90,48,0)}}
   .step-warning{display:none; background:#FAEEDA; border:1px solid #f0d4a8; border-radius:10px; padding:10px 14px; font-size:13px; color:#854f0b; margin-top:14px; text-align:center}
+  select.select-warning{border:2px solid var(--orange); animation:pulse-warn .4s ease}
   .step-warning.show{display:block}
   .nsab-row input{margin:0; accent-color:var(--orange)}
   .nsab-row label{cursor:pointer}
@@ -270,7 +271,7 @@
 
     <div class="card">
       <label class="q-label" data-i18n="d1_label">País en el que trabajas actualmente</label>
-      <select id="d1">
+      <select id="d1" required>
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
         <option value="Spain">España</option><option value="France">Francia</option><option value="Germany">Alemania</option><option value="Italy">Italia</option>
         <option value="Portugal">Portugal</option><option value="Poland">Polonia</option><option value="Netherlands">Países Bajos</option><option value="Belgium">Bélgica</option>
@@ -280,7 +281,7 @@
 
     <div class="card">
       <label class="q-label" data-i18n="d_age_label">Tu rango de edad</label>
-      <select id="dAge">
+      <select id="dAge" required>
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
         <option data-i18n="d_age_1" value="Under 25">Menos de 25</option>
         <option data-i18n="d_age_2" value="25-34">25-34</option>
@@ -293,7 +294,7 @@
 
     <div class="card">
       <label class="q-label" data-i18n="d_gender_label">Género</label>
-      <select id="dGender">
+      <select id="dGender" required>
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
         <option data-i18n="d_gender_1" value="Woman">Mujer</option>
         <option data-i18n="d_gender_2" value="Man">Hombre</option>
@@ -304,7 +305,7 @@
 
     <div class="card">
       <label class="q-label" data-i18n="d_contract_label">Tipo de contrato laboral</label>
-      <select id="dContract">
+      <select id="dContract" required>
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
         <option data-i18n="d_contract_1" value="Permanent">Permanente / funcionario</option>
         <option data-i18n="d_contract_2" value="Temporary">Temporal / interino</option>
@@ -314,7 +315,7 @@
 
     <div class="card">
       <label class="q-label" data-i18n="d_edu_label">Nivel educativo máximo alcanzado</label>
-      <select id="dEdu">
+      <select id="dEdu" required>
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
         <option data-i18n="d_edu_1" value="Bachelor">Diplomatura / Grado</option>
         <option data-i18n="d_edu_2" value="Master">Máster</option>
@@ -325,7 +326,7 @@
 
     <div class="card">
       <label class="q-label" data-i18n="d2_label">Etapa educativa en la que trabajas</label>
-      <select id="d2">
+      <select id="d2" required>
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
         <option data-i18n="d2_infantil" value="Early childhood">Infantil</option>
         <option data-i18n="d2_primaria" value="Primary">Primaria</option>
@@ -339,7 +340,7 @@
 
     <div class="card">
       <label class="q-label" data-i18n="d3_label">Años de experiencia docente</label>
-      <select id="d3">
+      <select id="d3" required>
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
         <option value="0-5">0–5</option><option value="6-10">6–10</option><option value="11-20">11–20</option>
         <option data-i18n="d3_more" value="20+">Más de 20</option>
@@ -348,7 +349,7 @@
 
     <div class="card">
       <label class="q-label" data-i18n="d5_label">¿Con qué frecuencia usas herramientas de IA en tu docencia?</label>
-      <select id="d5">
+      <select id="d5" required>
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
         <option data-i18n="d5_never" value="Never">Nunca</option>
         <option data-i18n="d5_occ" value="Occasionally">Ocasionalmente</option>
@@ -360,7 +361,7 @@
 
     <div class="card">
       <label class="q-label" data-i18n="d6_label">Tipo de centro donde trabajas</label>
-      <select id="d6">
+      <select id="d6" required>
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
         <option data-i18n="d6_urban" value="Urban">Urbano</option>
         <option data-i18n="d6_suburban" value="Suburban">Semiurbano</option>
@@ -580,8 +581,27 @@
     </div>
   </section>
 
-  <!-- STEP 9: C3 - RESEARCH FILTER -->
+  <!-- STEP 9: TRANSITION TO BLOCK 3 -->
   <section class="block" data-step="9">
+    <div class="block-head">
+      <div class="block-eyebrow" data-i18n="b8b_eyebrow">¡Bien hecho!</div>
+      <div class="block-title" data-i18n="b8b_title">Has completado el segundo bloque</div>
+      <div class="block-desc" data-i18n="b8b_desc">
+        Tus respuestas siguen sumando valor para el estudio. Queda un último bloque, de unos 5 minutos,
+        sobre el uso de IA en el trabajo de investigación académica. Si lo completas, nos darás una visión
+        más completa del estudio, pero puedes finalizar aquí si lo prefieres.
+      </div>
+    </div>
+
+    <div class="nav-row">
+      <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
+      <button class="btn btn-ghost" id="submitBlock2Btn" data-i18n="submit_block2">Enviar y finalizar →</button>
+      <button class="btn btn-primary" data-next data-i18n="continue_block3">Continuar al bloque 3 →</button>
+    </div>
+  </section>
+
+  <!-- STEP 10: C3 - RESEARCH FILTER -->
+  <section class="block" data-step="10">
     <div class="block-head">
       <div class="block-eyebrow" data-i18n="b9_eyebrow">Bloque 3 de 3</div>
       <div class="block-title" data-i18n="b9_title">El docente-investigador ante la IA</div>
@@ -603,8 +623,8 @@
     </div>
   </section>
 
-  <!-- STEP 10: C3 - TASK CONCERNS -->
-  <section class="block" data-step="10">
+  <!-- STEP 11: C3 - TASK CONCERNS -->
+  <section class="block" data-step="11">
     <div class="block-head">
       <div class="block-eyebrow" data-i18n="b10_eyebrow">Bloque 3 de 3</div>
       <div class="block-title" data-i18n="b10_title">Tareas de investigación y uso de IA</div>
@@ -632,7 +652,7 @@
   </section>
 
   <!-- STEP 11: C3 - EDITORIAL POLICIES -->
-  <section class="block" data-step="11">
+  <section class="block" data-step="12">
     <div class="block-head">
       <div class="block-eyebrow" data-i18n="b11_eyebrow">Bloque 3 de 3</div>
       <div class="block-title" data-i18n="b11_title">Políticas editoriales y transparencia</div>
@@ -657,7 +677,7 @@
   </section>
 
   <!-- STEP 12: THANK YOU -->
-  <section class="block" data-step="12">
+  <section class="block" data-step="13">
     <div class="consent-box">
       <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
         <h1 data-i18n="thanks_title" style="margin:0">¡Gracias por tu participación!</h1>
@@ -1910,13 +1930,13 @@ const I18N = {
     tr1_label:"¿Qué tipos de formación en IA has recibido? (varias opciones)",
     tr2_label:"Horas aproximadas de formación en los últimos 2 años", tr2_none:"Ninguna", tr2_more:"Más de 30",
     nsab:"No sabría responder a esto",
-    slider_instruction:"Mueve el deslizador o pulsa \"Confirmar\" para registrar tu respuesta.",
+    slider_instruction:"Este deslizador no tiene valor hasta que lo muevas. Tócalo y arrástralo, aunque sea ligeramente, para activarlo y dejarlo donde quieras, incluso en el extremo izquierdo (0).",
     unanswered_tag:"Sin responder",
     confirm_value:"Confirmar {v}",
     validation_warning:"Responde este ítem o selecciona \"No sabría responder\".",
     sort_hint:"En móvil: toca una tarjeta y luego toca la zona donde quieras colocarla.",
     howto_title:"Cómo responder",
-    howto_slider:"Deslizadores: arrastra el círculo, o tócalo y usa las flechas del teclado en ordenador.",
+    howto_slider:"Deslizadores: no tienen valor hasta que los muevas. Arrastra el círculo, o tócalo y usa las flechas del teclado en ordenador, para colocarlo donde quieras, incluso en el extremo izquierdo.",
     howto_vignette:"Viñetas: lee la situación y mueve el deslizador según el nivel de inquietud que te genere.",
     howto_sort:"Tarjetas: en ordenador, arrástralas; en móvil, toca la tarjeta y luego toca la zona donde quieras colocarla.",
     sum_c1:"Bloque 1: tu inquietud ante cada situación",
@@ -1933,7 +1953,7 @@ const I18N = {
     thanks_p1:"Tus respuestas se han registrado de forma anónima. Aquí tienes un resumen visual de tus respuestas sobre las situaciones planteadas. Este resumen es solo para ti, no se almacena.",
     thanks_p2:"Si tienes preguntas sobre el estudio, escribe a cristina.prego@urjc.es",
     progress:"Paso", of:"de",
-    step_names:["Bienvenida","Quién eres","Situaciones reales","Conocimiento y bienestar","Formación","Bloques opcionales","Clima del centro","Familias y estudiantes","Contratación y resultados","Filtro investigación","Tareas e IA","Políticas editoriales","Gracias"],
+    step_names:["Bienvenida","Quién eres","Situaciones reales","Conocimiento y bienestar","Formación","Bloques opcionales","Clima del centro","Familias y estudiantes","Contratación y resultados","Bloque 2 completado","Filtro investigación","Tareas e IA","Políticas editoriales","Gracias"],
     b6_eyebrow:"Bloque 2 de 3", b6_title:"El clima de tu centro", b6_desc:"Sobre cómo se está gestionando la IA en tu centro educativo.",
     sort2_title:"¿De dónde viene el impulso hacia la IA en tu centro?",
     sort2_instr:"Si tu centro ha recibido directrices para integrar la IA, arrastra cada posible origen a la zona que refleje cuánto ha influido.",
@@ -1941,6 +1961,9 @@ const I18N = {
     b8_eyebrow:"Bloque 2 de 3", b8_title:"Contratación y resultados", b8_desc:"Sobre tu propio centro y sobre tu percepción del sistema educativo en general.",
     b8_notice:"Si haces investigación, el siguiente bloque pregunta sobre el uso de IA en tu trabajo académico. Si no, puedes finalizar aquí.",
     continue_research:"Continuar con investigación →",
+    b8b_eyebrow:"¡Bien hecho!", b8b_title:"Has completado el segundo bloque",
+    b8b_desc:"Tus respuestas siguen sumando valor para el estudio. Queda un último bloque, de unos 5 minutos, sobre el uso de IA en el trabajo de investigación académica. Si lo completas, nos darás una visión más completa del estudio, pero puedes finalizar aquí si lo prefieres.",
+    submit_block2:"Enviar y finalizar →", continue_block3:"Continuar al bloque 3 →",
     b9_eyebrow:"Bloque 3 de 3", b9_title:"El docente-investigador ante la IA", b9_desc:"Solo para quienes realizan actividad investigadora o de escritura académica.",
     inv1_label:"¿Realizas actualmente actividad investigadora o de escritura académica (artículos, comunicaciones, tesis)?",
     yes:"Sí", no:"No",
@@ -1994,13 +2017,13 @@ const I18N = {
     tr1_label:"What types of AI training have you received? (select all that apply)",
     tr2_label:"Approximate hours of training in the last 2 years", tr2_none:"None", tr2_more:"More than 30",
     nsab:"I would not know how to answer this",
-    slider_instruction:"Move the slider or press \"Confirm\" to record your answer.",
+    slider_instruction:"This slider has no value until you move it. Touch and drag it, even slightly, to activate it and leave it wherever you want, including the far left (0).",
     unanswered_tag:"Unanswered",
     confirm_value:"Confirm {v}",
     validation_warning:"Please answer this item or select \"I would not know how to answer this\".",
     sort_hint:"On mobile: tap a card, then tap the zone where you want to place it.",
     howto_title:"How to answer",
-    howto_slider:"Sliders: drag the circle, or tap it and use the keyboard arrows on a computer.",
+    howto_slider:"Sliders: they have no value until you move them. Drag the circle, or tap it and use the keyboard arrows on a computer, to place it wherever you want, including the far left.",
     howto_vignette:"Vignettes: read the situation and move the slider according to how much concern it raises for you.",
     howto_sort:"Cards: on a computer, drag them; on mobile, tap the card and then tap the zone where you want to place it.",
     sum_c1:"Block 1: your concern about each situation",
@@ -2017,7 +2040,7 @@ const I18N = {
     thanks_p1:"Your answers have been recorded anonymously. Here is a visual summary of your answers to the situations presented. This summary is only for you, it is not stored.",
     thanks_p2:"If you have questions about the study, write to cristina.prego@urjc.es",
     progress:"Step", of:"of",
-    step_names:["Welcome","Who you are","Real situations","Knowledge and wellbeing","Training","Optional blocks","School climate","Families and students","Staffing and outcomes","Research filter","Tasks and AI","Editorial policies","Thank you"],
+    step_names:["Welcome","Who you are","Real situations","Knowledge and wellbeing","Training","Optional blocks","School climate","Families and students","Staffing and outcomes","Block 2 complete","Research filter","Tasks and AI","Editorial policies","Thank you"],
     b6_eyebrow:"Block 2 of 3", b6_title:"Your school's climate", b6_desc:"About how AI is being managed at your school.",
     sort2_title:"Where does the push toward AI in your school come from?",
     sort2_instr:"If your school has received directives to integrate AI, drag each possible source to the zone reflecting how much influence it has had.",
@@ -2025,6 +2048,9 @@ const I18N = {
     b8_eyebrow:"Block 2 of 3", b8_title:"Staffing and outcomes", b8_desc:"About your own school and your perception of the education system in general.",
     b8_notice:"If you do research, the next block asks about using AI in academic work. If not, you can finish here.",
     continue_research:"Continue with research block →",
+    b8b_eyebrow:"Well done!", b8b_title:"You've completed the second block",
+    b8b_desc:"Your answers continue to add value to the study. One last block remains, about 5 minutes, on the use of AI in academic research work. Completing it gives us a fuller picture of the study, but you can finish here if you prefer.",
+    submit_block2:"Submit and finish →", continue_block3:"Continue to block 3 →",
     b9_eyebrow:"Block 3 of 3", b9_title:"The teacher-researcher and AI", b9_desc:"Only for those who currently do research or academic writing.",
     inv1_label:"Do you currently engage in academic research or writing (e.g. articles, conference papers, thesis)?",
     yes:"Yes", no:"No",
@@ -2078,13 +2104,13 @@ const I18N = {
     tr1_label:"Quels types de formation en IA avez-vous reçus ? (plusieurs réponses possibles)",
     tr2_label:"Heures approximatives de formation au cours des 2 dernières années", tr2_none:"Aucune", tr2_more:"Plus de 30",
     nsab:"Je ne saurais pas répondre à cela",
-    slider_instruction:"Déplacez le curseur ou appuyez sur \"Confirmer\" pour enregistrer votre réponse.",
+    slider_instruction:"Ce curseur n'a pas de valeur tant que vous ne le déplacez pas. Touchez-le et faites-le glisser, même légèrement, pour l'activer et le laisser où vous voulez, y compris à l'extrême gauche (0).",
     unanswered_tag:"Sans réponse",
     confirm_value:"Confirmer {v}",
     validation_warning:"Veuillez répondre à cet item ou sélectionner \"Je ne saurais pas répondre\".",
     sort_hint:"Sur mobile : touchez une carte, puis touchez la zone où la placer.",
     howto_title:"Comment répondre",
-    howto_slider:"Curseurs : faites glisser le cercle, ou touchez-le et utilisez les flèches du clavier sur ordinateur.",
+    howto_slider:"Curseurs : ils n'ont pas de valeur tant que vous ne les déplacez pas. Faites glisser le cercle, ou touchez-le et utilisez les flèches du clavier sur ordinateur, pour le placer où vous voulez, y compris à l'extrême gauche.",
     howto_vignette:"Vignettes : lisez la situation et déplacez le curseur selon le niveau d'inquiétude que cela vous procure.",
     howto_sort:"Cartes : sur ordinateur, faites-les glisser ; sur mobile, touchez la carte puis touchez la zone où la placer.",
     sum_c1:"Bloc 1 : votre inquiétude face à chaque situation",
@@ -2101,7 +2127,7 @@ const I18N = {
     thanks_p1:"Vos réponses ont été enregistrées de manière anonyme. Voici un résumé visuel de vos réponses aux situations présentées. Ce résumé est seulement pour vous, il n'est pas stocké.",
     thanks_p2:"Si vous avez des questions sur l'étude, écrivez à cristina.prego@urjc.es",
     progress:"Étape", of:"sur",
-    step_names:["Bienvenue","Qui vous êtes","Situations réelles","Connaissances et bien-être","Formation","Blocs facultatifs","Climat de l'établissement","Familles et élèves","Personnel et résultats","Filtre recherche","Tâches et IA","Politiques éditoriales","Merci"],
+    step_names:["Bienvenue","Qui vous êtes","Situations réelles","Connaissances et bien-être","Formation","Blocs facultatifs","Climat de l'établissement","Familles et élèves","Personnel et résultats","Bloc 2 terminé","Filtre recherche","Tâches et IA","Politiques éditoriales","Merci"],
     b6_eyebrow:"Bloc 2 sur 3", b6_title:"Le climat de votre établissement", b6_desc:"Sur la façon dont l'IA est gérée dans votre établissement.",
     sort2_title:"D'où vient l'impulsion vers l'IA dans votre établissement ?",
     sort2_instr:"Si votre établissement a reçu des directives pour intégrer l'IA, faites glisser chaque origine possible vers la zone reflétant son influence.",
@@ -2109,6 +2135,9 @@ const I18N = {
     b8_eyebrow:"Bloc 2 sur 3", b8_title:"Personnel et résultats", b8_desc:"Sur votre propre établissement et votre perception du système éducatif en général.",
     b8_notice:"Si vous faites de la recherche, le bloc suivant porte sur l'utilisation de l'IA dans votre travail académique. Sinon, vous pouvez terminer ici.",
     continue_research:"Continuer avec le bloc recherche →",
+    b8b_eyebrow:"Bien joué !", b8b_title:"Vous avez terminé le deuxième bloc",
+    b8b_desc:"Vos réponses continuent d'apporter de la valeur à l'étude. Il reste un dernier bloc, d'environ 5 minutes, sur l'utilisation de l'IA dans le travail de recherche académique. Le compléter nous donnera une vision plus complète de l'étude, mais vous pouvez terminer ici si vous préférez.",
+    submit_block2:"Envoyer et terminer →", continue_block3:"Continuer au bloc 3 →",
     b9_eyebrow:"Bloc 3 sur 3", b9_title:"L'enseignant-chercheur face à l'IA", b9_desc:"Uniquement pour ceux qui font actuellement de la recherche ou de l'écriture académique.",
     inv1_label:"Faites-vous actuellement de la recherche ou de l'écriture académique (articles, communications, thèse) ?",
     yes:"Oui", no:"Non",
@@ -2162,13 +2191,13 @@ const I18N = {
     tr1_label:"Welche Arten von KI-Schulungen haben Sie erhalten? (Mehrfachauswahl möglich)",
     tr2_label:"Ungefähre Schulungsstunden in den letzten 2 Jahren", tr2_none:"Keine", tr2_more:"Mehr als 30",
     nsab:"Ich wüsste nicht, wie ich das beantworten soll",
-    slider_instruction:"Bewegen Sie den Regler oder drücken Sie \"Bestätigen\", um Ihre Antwort zu speichern.",
+    slider_instruction:"Dieser Regler hat keinen Wert, bis Sie ihn bewegen. Berühren und ziehen Sie ihn, auch nur leicht, um ihn zu aktivieren und dort zu lassen, wo Sie möchten, auch ganz links (0).",
     unanswered_tag:"Unbeantwortet",
     confirm_value:"Bestätigen {v}",
     validation_warning:"Bitte beantworten Sie dieses Item oder wählen Sie \"Ich wüsste nicht, wie ich das beantworten soll\".",
     sort_hint:"Auf dem Handy: Karte antippen, dann die gewünschte Zone antippen.",
     howto_title:"Wie Sie antworten",
-    howto_slider:"Schieberegler: Ziehen Sie den Kreis, oder tippen Sie ihn an und nutzen Sie am Computer die Pfeiltasten.",
+    howto_slider:"Schieberegler: Sie haben keinen Wert, bis Sie sie bewegen. Ziehen Sie den Kreis, oder tippen Sie ihn an und nutzen Sie am Computer die Pfeiltasten, um ihn dort zu platzieren, wo Sie möchten, auch ganz links.",
     howto_vignette:"Szenarien: Lesen Sie die Situation und bewegen Sie den Regler entsprechend Ihrer Sorge.",
     howto_sort:"Karten: am Computer ziehen; auf dem Handy die Karte antippen und dann die gewünschte Zone antippen.",
     sum_c1:"Block 1: Ihre Sorge bei jeder Situation",
@@ -2185,7 +2214,7 @@ const I18N = {
     thanks_p1:"Ihre Antworten wurden anonym erfasst. Hier ist eine visuelle Zusammenfassung Ihrer Antworten zu den vorgestellten Situationen. Diese Zusammenfassung ist nur für Sie, sie wird nicht gespeichert.",
     thanks_p2:"Wenn Sie Fragen zur Studie haben, schreiben Sie an cristina.prego@urjc.es",
     progress:"Schritt", of:"von",
-    step_names:["Willkommen","Wer Sie sind","Reale Situationen","Wissen und Wohlbefinden","Schulung","Optionale Blöcke","Schulklima","Familien und Schüler","Personal und Ergebnisse","Forschungsfilter","Aufgaben und KI","Redaktionelle Richtlinien","Danke"],
+    step_names:["Willkommen","Wer Sie sind","Reale Situationen","Wissen und Wohlbefinden","Schulung","Optionale Blöcke","Schulklima","Familien und Schüler","Personal und Ergebnisse","Block 2 abgeschlossen","Forschungsfilter","Aufgaben und KI","Redaktionelle Richtlinien","Danke"],
     b6_eyebrow:"Block 2 von 3", b6_title:"Das Klima Ihrer Schule", b6_desc:"Darüber, wie KI an Ihrer Schule gehandhabt wird.",
     sort2_title:"Woher kommt der Impuls zur KI an Ihrer Schule?",
     sort2_instr:"Falls Ihre Schule Richtlinien zur Integration von KI erhalten hat, ziehen Sie jede mögliche Quelle in die Zone, die ihren Einfluss widerspiegelt.",
@@ -2193,6 +2222,9 @@ const I18N = {
     b8_eyebrow:"Block 2 von 3", b8_title:"Personal und Ergebnisse", b8_desc:"Über Ihre eigene Schule und Ihre Wahrnehmung des Bildungssystems im Allgemeinen.",
     b8_notice:"Wenn Sie forschen, fragt der nächste Block nach der Nutzung von KI in akademischer Arbeit. Wenn nicht, können Sie hier beenden.",
     continue_research:"Mit Forschungsblock fortfahren →",
+    b8b_eyebrow:"Gut gemacht!", b8b_title:"Sie haben den zweiten Block abgeschlossen",
+    b8b_desc:"Ihre Antworten sind weiterhin wertvoll für die Studie. Es bleibt ein letzter Block von etwa 5 Minuten zur Nutzung von KI in der akademischen Forschungsarbeit. Wenn Sie ihn abschließen, erhalten wir ein vollständigeres Bild der Studie, aber Sie können hier auch beenden, wenn Sie möchten.",
+    submit_block2:"Absenden und beenden →", continue_block3:"Weiter zu Block 3 →",
     b9_eyebrow:"Block 3 von 3", b9_title:"Die forschende Lehrkraft und KI", b9_desc:"Nur für diejenigen, die derzeit forschen oder akademisch schreiben.",
     inv1_label:"Betreiben Sie derzeit akademische Forschung oder Schreiben (z.B. Artikel, Konferenzbeiträge, Dissertation)?",
     yes:"Ja", no:"Nein",
@@ -2246,13 +2278,13 @@ const I18N = {
     tr1_label:"Che tipo di formazione sull'IA hai ricevuto? (selezione multipla)",
     tr2_label:"Ore approssimative di formazione negli ultimi 2 anni", tr2_none:"Nessuna", tr2_more:"Più di 30",
     nsab:"Non saprei come rispondere",
-    slider_instruction:"Sposta il cursore o premi \"Conferma\" per registrare la tua risposta.",
+    slider_instruction:"Questo cursore non ha valore finché non lo sposti. Toccalo e trascinalo, anche leggermente, per attivarlo e lasciarlo dove vuoi, anche all'estrema sinistra (0).",
     unanswered_tag:"Senza risposta",
     confirm_value:"Conferma {v}",
     validation_warning:"Rispondi a questo item oppure seleziona \"Non saprei rispondere\".",
     sort_hint:"Su dispositivo mobile: tocca una carta, poi tocca la zona in cui posizionarla.",
     howto_title:"Come rispondere",
-    howto_slider:"Cursori: trascina il cerchio, oppure toccalo e usa le freccette della tastiera sul computer.",
+    howto_slider:"Cursori: non hanno valore finché non li sposti. Trascina il cerchio, oppure toccalo e usa le freccette della tastiera sul computer, per posizionarlo dove vuoi, anche all'estrema sinistra.",
     howto_vignette:"Vignette: leggi la situazione e sposta il cursore in base al livello di preoccupazione che ti genera.",
     howto_sort:"Carte: sul computer trascinale; su mobile tocca la carta e poi tocca la zona in cui vuoi posizionarla.",
     sum_c1:"Blocco 1: la tua preoccupazione per ogni situazione",
@@ -2269,7 +2301,7 @@ const I18N = {
     thanks_p1:"Le tue risposte sono state registrate in modo anonimo. Ecco un riepilogo visivo delle tue risposte sulle situazioni presentate. Questo riepilogo è solo per te, non viene memorizzato.",
     thanks_p2:"Se hai domande sullo studio, scrivi a cristina.prego@urjc.es",
     progress:"Passo", of:"di",
-    step_names:["Benvenuto","Chi sei","Situazioni reali","Conoscenza e benessere","Formazione","Blocchi facoltativi","Clima scolastico","Famiglie e studenti","Personale e risultati","Filtro ricerca","Compiti e IA","Politiche editoriali","Grazie"],
+    step_names:["Benvenuto","Chi sei","Situazioni reali","Conoscenza e benessere","Formazione","Blocchi facoltativi","Clima scolastico","Famiglie e studenti","Personale e risultati","Blocco 2 completato","Filtro ricerca","Compiti e IA","Politiche editoriali","Grazie"],
     b6_eyebrow:"Blocco 2 di 3", b6_title:"Il clima della tua scuola", b6_desc:"Su come viene gestita l'IA nella tua scuola.",
     sort2_title:"Da dove viene la spinta verso l'IA nella tua scuola?",
     sort2_instr:"Se la tua scuola ha ricevuto direttive per integrare l'IA, trascina ciascuna possibile fonte nella zona che riflette quanta influenza ha avuto.",
@@ -2277,6 +2309,9 @@ const I18N = {
     b8_eyebrow:"Blocco 2 di 3", b8_title:"Personale e risultati", b8_desc:"Sulla tua scuola e sulla tua percezione del sistema scolastico in generale.",
     b8_notice:"Se fai ricerca, il blocco successivo chiede dell'uso dell'IA nel lavoro accademico. In caso contrario, puoi terminare qui.",
     continue_research:"Continua con il blocco ricerca →",
+    b8b_eyebrow:"Ottimo lavoro!", b8b_title:"Hai completato il secondo blocco",
+    b8b_desc:"Le tue risposte continuano ad avere valore per lo studio. Resta un ultimo blocco, di circa 5 minuti, sull'uso dell'IA nel lavoro di ricerca accademica. Completarlo ci darà una visione più completa dello studio, ma puoi terminare qui se preferisci.",
+    submit_block2:"Invia e termina →", continue_block3:"Continua al blocco 3 →",
     b9_eyebrow:"Blocco 3 di 3", b9_title:"Il docente-ricercatore e l'IA", b9_desc:"Solo per chi attualmente fa ricerca o scrittura accademica.",
     inv1_label:"Attualmente svolgi attività di ricerca o scrittura accademica (articoli, contributi a conferenze, tesi)?",
     yes:"Sì", no:"No",
@@ -2330,13 +2365,13 @@ const I18N = {
     tr1_label:"Que tipos de formação em IA recebeu? (pode selecionar várias)",
     tr2_label:"Horas aproximadas de formação nos últimos 2 anos", tr2_none:"Nenhuma", tr2_more:"Mais de 30",
     nsab:"Não saberia responder a isto",
-    slider_instruction:"Mova o controlo deslizante ou prima \"Confirmar\" para registar a sua resposta.",
+    slider_instruction:"Este cursor não tem valor até que o mova. Toque e arraste-o, mesmo que ligeiramente, para o ativar e deixá-lo onde quiser, incluindo no extremo esquerdo (0).",
     unanswered_tag:"Sem resposta",
     confirm_value:"Confirmar {v}",
     validation_warning:"Responda a este item ou selecione \"Não saberia responder\".",
     sort_hint:"No telemóvel: toque num cartão e depois toque na zona onde o quer colocar.",
     howto_title:"Como responder",
-    howto_slider:"Cursores: arraste o círculo, ou toque nele e use as setas do teclado no computador.",
+    howto_slider:"Cursores: não têm valor até que os mova. Arraste o círculo, ou toque nele e use as setas do teclado no computador, para o colocar onde quiser, incluindo no extremo esquerdo.",
     howto_vignette:"Vinhetas: leia a situação e mova o cursor de acordo com o nível de preocupação que lhe causa.",
     howto_sort:"Cartões: no computador, arraste-os; no telemóvel, toque no cartão e depois toque na zona onde o quer colocar.",
     sum_c1:"Bloco 1: a sua preocupação com cada situação",
@@ -2353,7 +2388,7 @@ const I18N = {
     thanks_p1:"As suas respostas foram registadas de forma anónima. Aqui está um resumo visual das suas respostas às situações apresentadas. Este resumo é apenas para si, não é armazenado.",
     thanks_p2:"Se tiver perguntas sobre o estudo, escreva para cristina.prego@urjc.es",
     progress:"Passo", of:"de",
-    step_names:["Boas-vindas","Quem é você","Situações reais","Conhecimento e bem-estar","Formação","Blocos opcionais","Clima da escola","Famílias e estudantes","Pessoal e resultados","Filtro de investigação","Tarefas e IA","Políticas editoriais","Obrigado"],
+    step_names:["Boas-vindas","Quem é você","Situações reais","Conhecimento e bem-estar","Formação","Blocos opcionais","Clima da escola","Famílias e estudantes","Pessoal e resultados","Bloco 2 concluído","Filtro de investigação","Tarefas e IA","Políticas editoriais","Obrigado"],
     b6_eyebrow:"Bloco 2 de 3", b6_title:"O clima da sua escola", b6_desc:"Sobre como a IA está a ser gerida na sua escola.",
     sort2_title:"De onde vem o impulso para a IA na sua escola?",
     sort2_instr:"Se a sua escola recebeu diretrizes para integrar a IA, arraste cada possível origem para a zona que reflete quanta influência teve.",
@@ -2361,6 +2396,9 @@ const I18N = {
     b8_eyebrow:"Bloco 2 de 3", b8_title:"Pessoal e resultados", b8_desc:"Sobre a sua própria escola e a sua percepção do sistema educativo em geral.",
     b8_notice:"Se faz investigação, o próximo bloco pergunta sobre o uso da IA no trabalho académico. Caso contrário, pode terminar aqui.",
     continue_research:"Continuar com o bloco de investigação →",
+    b8b_eyebrow:"Muito bem!", b8b_title:"Concluiu o segundo bloco",
+    b8b_desc:"As suas respostas continuam a somar valor para o estudo. Falta um último bloco, de cerca de 5 minutos, sobre o uso da IA no trabalho de investigação académica. Completá-lo dar-nos-á uma visão mais completa do estudo, mas pode terminar aqui se preferir.",
+    submit_block2:"Enviar e terminar →", continue_block3:"Continuar para o bloco 3 →",
     b9_eyebrow:"Bloco 3 de 3", b9_title:"O docente-investigador e a IA", b9_desc:"Apenas para quem atualmente faz investigação ou escrita académica.",
     inv1_label:"Realiza atualmente atividade de investigação ou escrita académica (artigos, comunicações, tese)?",
     yes:"Sim", no:"Não",
@@ -2414,13 +2452,13 @@ const I18N = {
     tr1_label:"Jakie rodzaje szkoleń z AI otrzymałeś/aś? (można wybrać kilka)",
     tr2_label:"Przybliżona liczba godzin szkolenia w ostatnich 2 latach", tr2_none:"Brak", tr2_more:"Więcej niż 30",
     nsab:"Nie wiedziałbym/abym jak na to odpowiedzieć",
-    slider_instruction:"Przesuń suwak lub naciśnij \"Potwierdź\", aby zarejestrować odpowiedź.",
+    slider_instruction:"Ten suwak nie ma wartości, dopóki go nie przesuniesz. Dotknij go i przeciągnij, choćby lekko, aby go aktywować i zostawić tam, gdzie chcesz, nawet na samym lewym końcu (0).",
     unanswered_tag:"Brak odpowiedzi",
     confirm_value:"Potwierdź {v}",
     validation_warning:"Odpowiedz na to pytanie lub wybierz \"Nie wiedziałbym/abym jak odpowiedzieć\".",
     sort_hint:"Na telefonie: dotknij karty, a potem dotknij strefy, w której chcesz ją umieścić.",
     howto_title:"Jak odpowiadać",
-    howto_slider:"Przesuwniki: przeciągnij kółko lub dotknij go i użyj strzałek klawiatury na komputerze.",
+    howto_slider:"Przesuwniki: nie mają wartości, dopóki ich nie przesuniesz. Przeciągnij kółko lub dotknij go i użyj strzałek klawiatury na komputerze, aby umieścić je tam, gdzie chcesz, nawet na samym lewym końcu.",
     howto_vignette:"Winiety: przeczytaj sytuację i przesuń przesuwnik zgodnie z poziomem niepokoju, jaki wywołuje.",
     howto_sort:"Karty: na komputerze przeciągnij je; na telefonie dotknij karty, a potem dotknij strefy, w której chcesz ją umieścić.",
     sum_c1:"Blok 1: Twój niepokój wobec każdej sytuacji",
@@ -2437,7 +2475,7 @@ const I18N = {
     thanks_p1:"Twoje odpowiedzi zostały zarejestrowane anonimowo. Tutaj znajduje się wizualne podsumowanie Twoich odpowiedzi na przedstawione sytuacje. To podsumowanie jest tylko dla Ciebie, nie jest przechowywane.",
     thanks_p2:"Jeśli masz pytania dotyczące badania, napisz na cristina.prego@urjc.es",
     progress:"Krok", of:"z",
-    step_names:["Witamy","Kim jesteś","Rzeczywiste sytuacje","Wiedza i dobrostan","Szkolenie","Opcjonalne bloki","Klimat szkoły","Rodziny i uczniowie","Personel i wyniki","Filtr badawczy","Zadania i AI","Polityki redakcyjne","Dziękujemy"],
+    step_names:["Witamy","Kim jesteś","Rzeczywiste sytuacje","Wiedza i dobrostan","Szkolenie","Opcjonalne bloki","Klimat szkoły","Rodziny i uczniowie","Personel i wyniki","Blok 2 ukończony","Filtr badawczy","Zadania i AI","Polityki redakcyjne","Dziękujemy"],
     b6_eyebrow:"Blok 2 z 3", b6_title:"Klimat Twojej szkoły", b6_desc:"O tym, jak AI jest zarządzana w Twojej szkole.",
     sort2_title:"Skąd pochodzi impuls do AI w Twojej szkole?",
     sort2_instr:"Jeśli Twoja szkoła otrzymała wytyczne dotyczące integracji AI, przeciągnij każde możliwe źródło do strefy odzwierciedlającej jego wpływ.",
@@ -2445,6 +2483,9 @@ const I18N = {
     b8_eyebrow:"Blok 2 z 3", b8_title:"Personel i wyniki", b8_desc:"O Twojej własnej szkole i Twoim postrzeganiu systemu edukacji w ogóle.",
     b8_notice:"Jeśli prowadzisz badania, następny blok pyta o wykorzystanie AI w pracy akademickiej. Jeśli nie, możesz zakończyć tutaj.",
     continue_research:"Kontynuuj z blokiem badawczym →",
+    b8b_eyebrow:"Brawo!", b8b_title:"Ukończyłeś/aś drugi blok",
+    b8b_desc:"Twoje odpowiedzi nadal wnoszą wartość do badania. Pozostał ostatni blok, około 5 minut, dotyczący wykorzystania AI w pracy badawczej. Jego ukończenie da nam pełniejszy obraz badania, ale możesz zakończyć tutaj, jeśli wolisz.",
+    submit_block2:"Wyślij i zakończ →", continue_block3:"Przejdź do bloku 3 →",
     b9_eyebrow:"Blok 3 z 3", b9_title:"Nauczyciel-badacz a AI", b9_desc:"Tylko dla osób, które aktualnie prowadzą badania lub piszą teksty akademickie.",
     inv1_label:"Czy aktualnie zajmujesz się badaniami naukowymi lub pisaniem akademickim (artykuły, referaty konferencyjne, praca doktorska)?",
     yes:"Tak", no:"Nie",
@@ -2498,13 +2539,13 @@ const I18N = {
     tr1_label:"Welke soorten AI-training heeft u ontvangen? (meerdere antwoorden mogelijk)",
     tr2_label:"Geschatte uren training in de afgelopen 2 jaar", tr2_none:"Geen", tr2_more:"Meer dan 30",
     nsab:"Ik zou dit niet kunnen beantwoorden",
-    slider_instruction:"Verplaats de schuifregelaar of druk op \"Bevestigen\" om uw antwoord te registreren.",
+    slider_instruction:"Deze schuifregelaar heeft geen waarde totdat u deze verplaatst. Raak hem aan en sleep hem, al is het maar licht, om hem te activeren en hem te laten waar u wilt, ook helemaal links (0).",
     unanswered_tag:"Onbeantwoord",
     confirm_value:"Bevestigen {v}",
     validation_warning:"Beantwoord dit item of selecteer \"Ik zou dit niet kunnen beantwoorden\".",
     sort_hint:"Op mobiel: tik op een kaart en tik daarna op de zone waar u die wilt plaatsen.",
     howto_title:"Hoe te antwoorden",
-    howto_slider:"Schuifregelaars: sleep de cirkel, of tik erop en gebruik op de computer de pijltjestoetsen.",
+    howto_slider:"Schuifregelaars: ze hebben geen waarde totdat u ze verplaatst. Sleep de cirkel, of tik erop en gebruik op de computer de pijltjestoetsen, om hem te plaatsen waar u wilt, ook helemaal links.",
     howto_vignette:"Vignetten: lees de situatie en verplaats de schuifregelaar volgens de mate van bezorgdheid die het oproept.",
     howto_sort:"Kaarten: sleep ze op de computer; op mobiel tikt u op de kaart en daarna op de zone waar u die wilt plaatsen.",
     sum_c1:"Blok 1: uw bezorgdheid over elke situatie",
@@ -2521,7 +2562,7 @@ const I18N = {
     thanks_p1:"Uw antwoorden zijn anoniem geregistreerd. Hier is een visueel overzicht van uw antwoorden op de gepresenteerde situaties. Dit overzicht is alleen voor u, het wordt niet opgeslagen.",
     thanks_p2:"Als u vragen heeft over het onderzoek, schrijf naar cristina.prego@urjc.es",
     progress:"Stap", of:"van",
-    step_names:["Welkom","Wie u bent","Reële situaties","Kennis en welzijn","Training","Optionele blokken","Schoolklimaat","Gezinnen en leerlingen","Personeel en resultaten","Onderzoeksfilter","Taken en AI","Redactioneel beleid","Dank u"],
+    step_names:["Welkom","Wie u bent","Reële situaties","Kennis en welzijn","Training","Optionele blokken","Schoolklimaat","Gezinnen en leerlingen","Personeel en resultaten","Blok 2 voltooid","Onderzoeksfilter","Taken en AI","Redactioneel beleid","Dank u"],
     b6_eyebrow:"Blok 2 van 3", b6_title:"Het klimaat van uw school", b6_desc:"Over hoe AI op uw school wordt beheerd.",
     sort2_title:"Waar komt de drijfveer voor AI op uw school vandaan?",
     sort2_instr:"Als uw school richtlijnen heeft ontvangen om AI te integreren, sleep dan elke mogelijke bron naar de zone die de invloed weerspiegelt.",
@@ -2529,6 +2570,9 @@ const I18N = {
     b8_eyebrow:"Blok 2 van 3", b8_title:"Personeel en resultaten", b8_desc:"Over uw eigen school en uw perceptie van het onderwijssysteem in het algemeen.",
     b8_notice:"Als u onderzoek doet, vraagt het volgende blok naar het gebruik van AI in academisch werk. Zo niet, dan kunt u hier afronden.",
     continue_research:"Doorgaan met onderzoeksblok →",
+    b8b_eyebrow:"Goed gedaan!", b8b_title:"U heeft het tweede blok voltooid",
+    b8b_desc:"Uw antwoorden blijven waarde toevoegen aan het onderzoek. Er rest nog één blok, ongeveer 5 minuten, over het gebruik van AI in academisch onderzoekswerk. Het voltooien ervan geeft ons een vollediger beeld van het onderzoek, maar u kunt hier afronden als u dat liever heeft.",
+    submit_block2:"Verzenden en afronden →", continue_block3:"Doorgaan naar blok 3 →",
     b9_eyebrow:"Blok 3 van 3", b9_title:"De onderzoekende leraar en AI", b9_desc:"Alleen voor wie momenteel onderzoek doet of academisch schrijft.",
     inv1_label:"Doet u momenteel academisch onderzoek of schrijfwerk (artikelen, conferentiebijdragen, proefschrift)?",
     yes:"Ja", no:"Nee",
@@ -2548,7 +2592,7 @@ const I18N = {
    ============================================================ */
 let currentLang = 'es';
 let currentStep = 0;
-const totalSteps = 12; // fixed: shows progress out of the full 12-step journey
+const totalSteps = 13; // fixed: shows progress out of the full 13-step journey
 const responses = {}; // id -> {value, nsab}
 
 // Fallback helper: returns dataset[lang] if it exists, else dataset['en'], else dataset['es']
@@ -2646,7 +2690,7 @@ function buildSliderCard(item, anchors, idPrefix, compact){
   const col = document.createElement('div');
   col.className = 'slider-col';
   const slider = document.createElement('input');
-  slider.type = 'range'; slider.min=0; slider.max=100; slider.value=50; slider.step=1;
+  slider.type = 'range'; slider.min=0; slider.max=100; slider.value=0; slider.step=1;
   slider.setAttribute('aria-label', item.text);
   const bar = document.createElement('div');
   bar.className = 'value-bar';
@@ -2659,24 +2703,14 @@ function buildSliderCard(item, anchors, idPrefix, compact){
   row.appendChild(col); row.appendChild(tag);
   card.appendChild(row);
 
-  const confirmRow = document.createElement('div');
-  confirmRow.className = 'confirm-row';
-  const confirmBtn = document.createElement('button');
-  confirmBtn.type = 'button';
-  confirmBtn.className = 'confirm-btn';
-  confirmRow.appendChild(confirmBtn);
-  card.appendChild(confirmRow);
-
-  // Initialize state: untouched until interaction or confirmation
+  // Initialize state: untouched until the participant moves the slider
   responses[item.id] = { value: null, touched: false, nsab: false };
 
   function renderUnanswered(){
-    const v = parseInt(slider.value);
-    fill.style.width = v+'%';
+    fill.style.width = '0%';
     fill.style.background = '#e5e7eb';
     tag.textContent = T('unanswered_tag');
     tag.style.color = '#9ca3af';
-    confirmBtn.textContent = T('confirm_value').replace('{v}', v);
     card.classList.remove('answered');
     card.classList.remove('item-warning');
   }
@@ -2700,9 +2734,6 @@ function buildSliderCard(item, anchors, idPrefix, compact){
   }
 
   slider.addEventListener('input', () => {
-    commitValue(parseInt(slider.value));
-  });
-  confirmBtn.addEventListener('click', () => {
     commitValue(parseInt(slider.value));
   });
 
@@ -2741,6 +2772,7 @@ function buildVignetteCard(v, lang){
   const card = document.createElement('div');
   card.className = 'card vignette';
   card.dataset.itemId = v.id;
+  card.dataset.required = '1';
 
   const id = document.createElement('div');
   id.className = 'vignette-id';
@@ -2766,16 +2798,21 @@ function buildVignetteCard(v, lang){
   const speakBtn = document.createElement('button');
   speakBtn.className = 'speak-btn';
   speakBtn.innerHTML = '🔊';
-  speakBtn.onclick = () => speak(v.title+'. '+v.text+' '+v.q, lang, speakBtn);
+  speakBtn.onclick = () => speak(v.title+'. '+v.text+' '+v.q+'. '+Tl(lang,'slider_instruction'), lang, speakBtn);
   qRow.appendChild(q); qRow.appendChild(speakBtn);
   card.appendChild(qRow);
+
+  const instr = document.createElement('div');
+  instr.className = 'slider-instruction';
+  instr.textContent = Tl(lang, 'slider_instruction');
+  card.appendChild(instr);
 
   const row = document.createElement('div');
   row.className = 'slider-row';
   const col = document.createElement('div');
   col.className = 'slider-col';
   const slider = document.createElement('input');
-  slider.type='range'; slider.min=0; slider.max=100; slider.value=50;
+  slider.type='range'; slider.min=0; slider.max=100; slider.value=0; slider.step=1;
   slider.setAttribute('aria-label', v.title);
   const bar = document.createElement('div');
   bar.className='value-bar';
@@ -2788,18 +2825,38 @@ function buildVignetteCard(v, lang){
   row.appendChild(col); row.appendChild(tag);
   card.appendChild(row);
 
-  function update(){
-    const val = parseInt(slider.value);
+  // Initialize state: untouched until the participant moves the slider
+  responses[v.id] = { value: null, touched: false, nsab: false };
+
+  function renderUnanswered(){
+    fill.style.width = '0%';
+    fill.style.background = '#e5e7eb';
+    tag.textContent = Tl(lang, 'unanswered_tag');
+    tag.style.color = '#9ca3af';
+    card.classList.remove('answered');
+    card.classList.remove('item-warning');
+  }
+
+  function renderAnswered(val){
     const lvl = getLevel(val);
     fill.style.width = val+'%';
     fill.style.background = ANCHOR_COLORS[lvl];
-    tag.textContent = ANCHORS_THREAT[lvl];
+    tag.textContent = ANCHORS_THREAT[lvl] + ' (' + val + ')';
     tag.style.color = lvl>=2 ? ANCHOR_COLORS[lvl] : '#6b7280';
-    responses[v.id] = responses[v.id] || {};
-    responses[v.id].value = val;
+    card.classList.add('answered');
+    card.classList.remove('item-warning');
   }
-  slider.oninput = update;
-  update();
+
+  slider.addEventListener('input', () => {
+    const val = parseInt(slider.value);
+    responses[v.id].value = val;
+    responses[v.id].touched = true;
+    responses[v.id].nsab = false;
+    renderAnswered(val);
+    updateNavButtonState();
+  });
+
+  renderUnanswered();
 
   const nsabRow = document.createElement('div');
   nsabRow.className='nsab-row';
@@ -2810,8 +2867,15 @@ function buildVignetteCard(v, lang){
   nsabLabel.textContent = Tl(lang,'nsab');
   nsabInput.onchange = () => {
     card.classList.toggle('disabled-by-nsab', nsabInput.checked);
-    responses[v.id] = responses[v.id] || {};
     responses[v.id].nsab = nsabInput.checked;
+    if(nsabInput.checked){
+      card.classList.add('answered');
+      card.classList.remove('item-warning');
+    } else if(!responses[v.id].touched){
+      card.classList.remove('answered');
+      renderUnanswered();
+    }
+    updateNavButtonState();
   };
   nsabRow.appendChild(nsabInput); nsabRow.appendChild(nsabLabel);
   card.appendChild(nsabRow);
@@ -3126,8 +3190,8 @@ function applyTranslations(){
 function updateProgress(){
   const pct = Math.round((currentStep/totalSteps)*100);
   document.getElementById('progressFill').style.width = pct+'%';
-  if(currentStep === 12){
-    document.getElementById('progressLabel').textContent = T('step_names')[12];
+  if(currentStep === 13){
+    document.getElementById('progressLabel').textContent = T('step_names')[13];
   } else {
     document.getElementById('progressLabel').textContent = `${T('progress')} ${currentStep} ${T('of')} ${totalSteps} — ${T('step_names')[currentStep]}`;
   }
@@ -3141,7 +3205,7 @@ function getUnansweredCardsInStep(step){
   const block = document.querySelector(`.block[data-step="${step}"]`);
   if(!block) return [];
   const cards = Array.from(block.querySelectorAll('.card[data-required="1"]'));
-  return cards.filter(card => {
+  const unansweredCards = cards.filter(card => {
     const id = card.dataset.itemId;
     const r = responses[id];
     if(!r) return false;
@@ -3150,6 +3214,25 @@ function getUnansweredCardsInStep(step){
     if(hiddenParent) return false;
     return !r.touched && !r.nsab;
   });
+  const selects = Array.from(block.querySelectorAll('select[required]'));
+  const unansweredSelects = selects.filter(sel => !sel.value);
+  return unansweredCards.concat(unansweredSelects);
+}
+
+function highlightUnanswered(el){
+  if(el.tagName === 'SELECT'){
+    el.classList.add('select-warning');
+  } else {
+    el.classList.add('item-warning');
+  }
+}
+
+function clearHighlight(el){
+  if(el.tagName === 'SELECT'){
+    el.classList.remove('select-warning');
+  } else {
+    el.classList.remove('item-warning');
+  }
 }
 
 function validateCurrentStep(){
@@ -3159,7 +3242,7 @@ function validateCurrentStep(){
     if(warningEl) warningEl.classList.remove('show');
     return true;
   }
-  unanswered.forEach(c => c.classList.add('item-warning'));
+  unanswered.forEach(el => highlightUnanswered(el));
   if(warningEl) warningEl.classList.add('show');
   unanswered[0].scrollIntoView({behavior:'smooth', block:'center'});
   return false;
@@ -3169,7 +3252,7 @@ function updateNavButtonState(){
   const block = document.querySelector(`.block[data-step="${currentStep}"].active`);
   if(!block) return;
   const unanswered = getUnansweredCardsInStep(currentStep);
-  const nextBtns = block.querySelectorAll('[data-next], #submitFinalBtn, #submitBlock1Btn, #finishBlock1Btn');
+  const nextBtns = block.querySelectorAll('[data-next], #submitFinalBtn, #submitBlock1Btn, #submitBlock2Btn, #finishBlock1Btn');
   nextBtns.forEach(btn => {
     btn.disabled = unanswered.length > 0;
   });
@@ -3183,15 +3266,18 @@ function showStep(step){
   currentStep = step;
   updateProgress();
 
-  // Inject audio button into block-head (steps 1-11) if not already there
-  if(step >= 1 && step <= 11){
+  // Inject audio button into block-head (steps 1-12) if not already there
+  if(step >= 1 && step <= 12){
     const head = block.querySelector('.block-head');
-    if(head && !head.querySelector('.block-speak-btn')){
+    let existingBtn = head ? head.querySelector('.block-speak-btn') : null;
+    if(head && !existingBtn){
       const btn = document.createElement('button');
+      btn.type = 'button';
       btn.className = 'speak-btn block-speak-btn';
       btn.setAttribute('aria-label','audio');
       btn.innerHTML = '🔊';
       btn.style.marginTop = '8px';
+      btn.style.display = 'inline-flex';
       btn.onclick = () => {
         const eyebrow = head.querySelector('[data-i18n$="_eyebrow"]');
         const title = head.querySelector('[data-i18n$="_title"]');
@@ -3209,6 +3295,7 @@ function showStep(step){
           block.querySelector('[data-i18n="tr2_label"]'),
           block.querySelector('[data-i18n="inv1_label"]'),
           block.querySelector('[data-i18n="b5_desc"]'),
+          block.querySelector('.slider-instruction'),
         ];
         extras.filter(Boolean).forEach(el => {
           const t = el.textContent.trim();
@@ -3221,7 +3308,16 @@ function showStep(step){
             if(t) parts.push(t);
           });
         }
-        speak(parts.join('. '), currentLang, btn);
+        // Step 10 (research task concerns): read the concern question once,
+        // not every dynamically-built task card text (kept short and reliable)
+        if(step === 10){
+          parts.push(T('concern_q'));
+        }
+        try {
+          speak(parts.join('. '), currentLang, btn);
+        } catch(err){
+          console.error('speak() failed', err);
+        }
       };
       head.appendChild(btn);
     }
@@ -3316,6 +3412,15 @@ function renderProfile(){
    ============================================================ */
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzeav_u_GJK7zHKdz1V0G1ZKVw-WcISyPFq39XSLhtGR7RiqnVetHMQMOvp9PSqgRkIkA/exec";
 
+// Anonymous in-memory session identifier — generated fresh on page load,
+// never persisted (no cookies, no localStorage). Used only to update
+// the same row instead of creating duplicate rows per participant.
+function generateSessionId(){
+  if(window.crypto && window.crypto.randomUUID) return window.crypto.randomUUID();
+  return 'sid-' + Date.now() + '-' + Math.random().toString(36).slice(2,11);
+}
+const SESSION_ID = generateSessionId();
+
 function sendToSheets(payload){
   console.log("SUBMITTING PAYLOAD", JSON.stringify(payload, null, 2));
   fetch(APPS_SCRIPT_URL, {
@@ -3328,7 +3433,7 @@ function sendToSheets(payload){
   .catch(err => console.error("Error sending:", err));
 }
 
-function buildPayload(partial){
+function buildPayload(progressState){
   const demographics = {
     pais:            document.getElementById('d1')        ? document.getElementById('d1').value        : "",
     rango_edad:      document.getElementById('dAge')      ? document.getElementById('dAge').value      : "",
@@ -3342,15 +3447,16 @@ function buildPayload(partial){
   };
   return {
     origin:       "https://drcp-77.github.io",
+    sessionId:    SESSION_ID,
     lang:         currentLang,
-    partial:      partial ? "1" : "0",
+    partial:      progressState,
     demographics: demographics,
     responses:    responses
   };
 }
 
-function submitResponses(){
-  sendToSheets(buildPayload(false));
+function submitResponses(progressState){
+  sendToSheets(buildPayload(progressState || "complete"));
 }
 
 
@@ -3373,10 +3479,18 @@ document.getElementById('consentCheck').addEventListener('change', (e) => {
   document.getElementById('startBtn').disabled = !e.target.checked;
 });
 
+// Required demographic selects: clear warning highlight and re-check nav button on change
+document.querySelectorAll('select[required]').forEach(sel => {
+  sel.addEventListener('change', () => {
+    if(sel.value) clearHighlight(sel);
+    updateNavButtonState();
+  });
+});
+
 document.getElementById('startBtn').addEventListener('click', () => {
   showStep(1);
-  // Send minimal entry immediately — participant has consented and started
-  sendToSheets(buildPayload(true));
+  // Record that the participant started — same row will be updated as they progress
+  sendToSheets(buildPayload("start"));
 });
 
 document.querySelectorAll('[data-next]').forEach(btn => {
@@ -3404,28 +3518,35 @@ document.getElementById('inv1No').addEventListener('click', () => {
 
 document.getElementById('submitBlock1Btn').addEventListener('click', () => {
   if(!validateCurrentStep()) return;
-  submitResponses();
+  submitResponses("block1");
   renderProfile();
-  showStep(12);
+  showStep(13);
+});
+
+document.getElementById('submitBlock2Btn').addEventListener('click', () => {
+  if(!validateCurrentStep()) return;
+  submitResponses("block2");
+  renderProfile();
+  showStep(13);
 });
 
 document.getElementById('inv1NextBtn').addEventListener('click', () => {
   if(!validateCurrentStep()) return;
   if(responses['INV1'] && responses['INV1'].value === 'no'){
-    submitResponses();
+    submitResponses("block2");
     renderProfile();
-    showStep(12);
+    showStep(13);
   } else {
-    showStep(10);
+    showStep(11);
   }
 });
 
 // Step 11 (final submit)
 document.getElementById('submitFinalBtn').addEventListener('click', () => {
   if(!validateCurrentStep()) return;
-  submitResponses();
+  submitResponses("complete");
   renderProfile();
-  showStep(12);
+  showStep(13);
 });
 
 // init
