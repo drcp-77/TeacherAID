@@ -2752,6 +2752,13 @@ function buildSliderCard(item, anchors, idPrefix, compact){
     card.classList.toggle('disabled-by-nsab', nsabInput.checked);
     responses[item.id].nsab = nsabInput.checked;
     if(nsabInput.checked){
+      // Discard any previously given value — DONTKNOW takes precedence
+      responses[item.id].value = null;
+      slider.value = 0;
+      fill.style.width = '0%';
+      fill.style.background = '#e5e7eb';
+      tag.textContent = T('unanswered_tag');
+      tag.style.color = '#9ca3af';
       card.classList.add('answered');
       card.classList.remove('item-warning');
     } else if(!responses[item.id].touched){
@@ -2869,6 +2876,13 @@ function buildVignetteCard(v, lang){
     card.classList.toggle('disabled-by-nsab', nsabInput.checked);
     responses[v.id].nsab = nsabInput.checked;
     if(nsabInput.checked){
+      // Discard any previously given value — DONTKNOW takes precedence
+      responses[v.id].value = null;
+      slider.value = 0;
+      fill.style.width = '0%';
+      fill.style.background = '#e5e7eb';
+      tag.textContent = Tl(lang, 'unanswered_tag');
+      tag.style.color = '#9ca3af';
       card.classList.add('answered');
       card.classList.remove('item-warning');
     } else if(!responses[v.id].touched){
@@ -3113,7 +3127,12 @@ function buildConcernCard(t, lang){
 function buildTR1Options(){
   const container = document.getElementById('tr1Options');
   container.innerHTML = '';
-  D(TR1_OPTIONS).forEach((label, i) => {
+  responses['TR1'] = { value: [] };
+  const options = D(TR1_OPTIONS);
+  const noneIdx = options.length - 1; // "Ninguna"/"None"/etc. is always the last option
+  const checkboxes = [];
+
+  options.forEach((label, i) => {
     const row = document.createElement('label');
     row.style.display='flex'; row.style.alignItems='center'; row.style.gap='10px';
     row.style.padding='10px 12px'; row.style.marginBottom='8px'; row.style.fontSize='13px';
@@ -3121,10 +3140,18 @@ function buildTR1Options(){
     row.style.background = '#fff';
     const cb = document.createElement('input');
     cb.type='checkbox'; cb.value=label; cb.dataset.idx=i;
+    checkboxes.push(cb);
     cb.onchange = () => {
-      responses['TR1'] = responses['TR1'] || {value:[]};
-      if(cb.checked) responses['TR1'].value.push(label);
-      else responses['TR1'].value = responses['TR1'].value.filter(x=>x!==label);
+      if(cb.checked && i === noneIdx){
+        // "None" selected: uncheck every other option
+        checkboxes.forEach((other, j) => {
+          if(j !== noneIdx && other.checked) other.checked = false;
+        });
+      } else if(cb.checked && i !== noneIdx){
+        // Any specific training type selected: uncheck "None"
+        if(checkboxes[noneIdx].checked) checkboxes[noneIdx].checked = false;
+      }
+      responses['TR1'].value = checkboxes.filter(c => c.checked).map(c => c.value);
     };
     row.appendChild(cb);
     row.appendChild(document.createTextNode(label));
